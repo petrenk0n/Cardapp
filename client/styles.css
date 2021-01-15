@@ -10,16 +10,18 @@ html{
 .navbar-brand{
     font-family: 'Roboto Slab', serif;
     font-size:35px;
+    color:white;
 }
 
 .nav-item{
     font-family: 'Roboto Slab', serif;
     font-size: 35px;
+    color:white;
     
 }
 .context {
     width: 100%;
-    position: fixed;
+    position:absolute;
     top: 25vh;
     text-align: center;
     color: #fff;
