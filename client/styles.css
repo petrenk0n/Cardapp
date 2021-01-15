@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+*{
+    background-image: url("img/road-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar-brand{
+    font-family: 'Roboto Slab', serif;
+    font-size:35px;
+}
+
+.nav-item{
+    font-family: 'Roboto Slab', serif;
+    font-size: 35px;
+    
+}
+.context {
+    width: 100%;
+    position: fixed;
+    top: 25vh;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .context h1 {
+    font-size: 100px;
+  }
+.context h3{
+    font-size: 45px;
+}
