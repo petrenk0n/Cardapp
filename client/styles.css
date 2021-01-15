@@ -1,23 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-*{
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+body{
     background-image: url("img/road-bg.jpg");
     background-size: cover;
-    background-attachment: fixed;
-}
-html{
-    scroll-behavior: smooth;
+    background-attachment: fixed;  
 }
 .navbar-brand{
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Open Sans', serif;
     font-size:35px;
-    color:white;
 }
 
-.nav-item{
-    font-family: 'Roboto Slab', serif;
+.navbar{
+    font-family: 'Open Sans', serif;
     font-size: 35px;
     color:white;
-    
 }
 .context {
     width: 100%;
@@ -32,4 +28,21 @@ html{
   }
 .context h3{
     font-size: 45px;
+}
+
+.home-search{
+    color:#fff;
+    padding:60px;
+}
+
+.search-button{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 90px;
+}
+
+.search-field{
+    padding:10px;
+    border-radius: 90px;
+    width: 300px;
 }
