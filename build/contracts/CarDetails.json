@@ -1,0 +1,225 @@
+{
+  "contractName": "CarDetails",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "carCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"carCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/nikitapetrenko/Desktop/Cardapp/contracts/CarDetails.sol\":\"CarDetails\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/nikitapetrenko/Desktop/Cardapp/contracts/CarDetails.sol\":{\"keccak256\":\"0xcb56bbca0691b19de6c0a6480394b9881efa675a9167624c6fb5d53391c455c3\",\"urls\":[\"bzz-raw://1871eca82f776bf335420678c004977e2cf214dae932fd041e558b9c9f3514ff\",\"dweb:/ipfs/QmfXgtw34tyBZ6xyQEgvS92WC47JyLQfuwT1c1KjRSEvqQ\"]}},\"version\":1}",
+  "bytecode": "0x608060405260008055348015601357600080fd5b506080806100226000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063297a1f5614602d575b600080fd5b60336045565b60408051918252519081900360200190f35b6000548156fea265627a7a723158205d4c1e0c696d7733ebba109fc833709b5d8682ee51a71c8f0fdefd5deeef726664736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063297a1f5614602d575b600080fd5b60336045565b60408051918252519081900360200190f35b6000548156fea265627a7a723158205d4c1e0c696d7733ebba109fc833709b5d8682ee51a71c8f0fdefd5deeef726664736f6c63430005100032",
+  "sourceMap": "25:53:0:-;;;74:1;51:24;;25:53;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:53:0;;;;;;;",
+  "deployedSourceMap": "25:53:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:53:0;;;;;;;;;;;;;;;;;;;51:24;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\ncontract CarDetails {\n    uint public carCount = 0;\n}",
+  "sourcePath": "/Users/nikitapetrenko/Desktop/Cardapp/contracts/CarDetails.sol",
+  "ast": {
+    "absolutePath": "/Users/nikitapetrenko/Desktop/Cardapp/contracts/CarDetails.sol",
+    "exportedSymbols": {
+      "CarDetails": [
+        5
+      ]
+    },
+    "id": 6,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "CarDetails",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "carCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 5,
+            "src": "51:24:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "51:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "74:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 6,
+        "src": "25:53:0"
+      }
+    ],
+    "src": "0:78:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/nikitapetrenko/Desktop/Cardapp/contracts/CarDetails.sol",
+      "exportedSymbols": {
+        "CarDetails": [
+          5
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            5
+          ],
+          "name": "CarDetails",
+          "scope": 6
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "carCount",
+              "scope": 5,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 2,
+                "name": "ElementaryTypeName",
+                "src": "51:4:0"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 3,
+                "name": "Literal",
+                "src": "74:1:0"
+              }
+            ],
+            "id": 4,
+            "name": "VariableDeclaration",
+            "src": "51:24:0"
+          }
+        ],
+        "id": 5,
+        "name": "ContractDefinition",
+        "src": "25:53:0"
+      }
+    ],
+    "id": 6,
+    "name": "SourceUnit",
+    "src": "0:78:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x9b0255bD387aC7CEFBcC264e76089Cd4379b5e81",
+      "transactionHash": "0x3f46d7dbc079df718f4e52a87f30c7262861184ccb745d1dfd3a335c7ca507bd"
+    }
+  },
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-01-15T20:10:37.655Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
