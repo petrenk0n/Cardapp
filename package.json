@@ -20,6 +20,10 @@
     "lite-server": "^2.3.0",
     "nodemon": "^1.17.3",
     "truffle": "5.0.2",
-    "truffle-contract": "3.0.6"
+    "truffle-contract": "^3.0.6"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "core-util-is": "^1.0.2"
   }
 }
