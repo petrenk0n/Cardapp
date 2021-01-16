@@ -5,13 +5,15 @@ body{
     background-attachment: fixed;  
 }
 .navbar-brand{
+    margin-left: 20px;
     font-family: 'Open Sans', serif;
-    font-size:35px;
+    font-size:20px;
+    margin-right: 5px;
 }
 
 .navbar{
     font-family: 'Open Sans', serif;
-    font-size: 35px;
+    font-size: 20px;
     color:white;
 }
 .context {
@@ -32,6 +34,7 @@ body{
 .home-search{
     color:#fff;
     padding:60px;
+    display:inline-flex;
 }
 
 .search-button{
