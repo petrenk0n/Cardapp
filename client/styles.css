@@ -35,16 +35,18 @@ body{
     color:#fff;
     padding:60px;
     display:inline-flex;
+    margin-left: 60vh;
 }
 
 .search-button{
     padding: 10px;
-    margin-top: 10px;
     border-radius: 90px;
+    margin-left: 10px;
+    width: 100px;
 }
 
 .search-field{
     padding:10px;
     border-radius: 90px;
-    width: 300px;
+    width: 350px;
 }
