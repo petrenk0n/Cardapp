@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+body{
+    background-image: url("img/black-background.jpg");
+    background-size: cover;
+    background-attachment: fixed;  
+}
+.navbar-brand{
+    font-family: 'Open Sans', serif;
+    font-size:35px;
+}
+
+.navbar{
+    font-family: 'Open Sans', serif;
+    font-size: 35px;
+    color:white;
+}
+
+.car-display{
+    border-radius: 15px;
+    border-color: white;
+    width: 25rem;
+    background:transparent;
+    color:white;
+    align-items: center;
+    top:20vh;
+    margin-left: 45px;
+}
+
+.card-title{
+    margin-bottom: 15px;
+}
+
+.card-text{
+    padding: 5px;
+}
+
+.car-image{
+    width:25rem;
+    border-radius: 16px;
+}
+
+.card:hover{
+    background: #5126c7; 
+    transform:  scale(1.02);
+}
