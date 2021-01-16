@@ -11,9 +11,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     </head>
     <body>
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="./img/car-icon.png" height="70" width="70">CarDapp</a>
+                <a class="navbar-brand" href="#"><img src="./img/dashboardicon.png" height="70" width="70">CarDapp</a>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -31,72 +31,25 @@
         </nav>
         
         <div class="container-fluid">
-            <div class="row row-cols-4">
-            <div class="col-sm card car-display">
-                <img src="img/sample-car.jpg" class="car-image">
-            <div class="card-body">
-                <h2 class="card-title">Sample Car Name</h2>
-                <!--
-                    uint id;
-                    string carModel;
-                    uint vin;
-                    uint mileage;
-                    uint numOfOwners;
-                    uint numOfServiceVisits;
-                    uint numOfReportedAccidents;
-                -->
-                <h4 class="card-text">ID: Sample ID<br>Car Model: Sample Model<br>VIN: Sample VIN<br>Mileage: Sample Mileage<br>Previous Owners: SampleNum<br>Service Visits: 123123<br>Reported Accidents: 123</h4>
+            <div class="row-cols-4">
+                <div class="col-sm card car-display">
+                    <img src="img/sample-car.jpg" class="car-image">
+                    <div class="card-body">
+                        <h2 class="card-title">Sample Car Name</h2>
+                            <!--
+                                uint id;
+                                string carModel;
+                                uint vin;
+                                uint mileage;
+                                uint numOfOwners;
+                                uint numOfServiceVisits;
+                                uint numOfReportedAccidents;
+                            -->
+                        <h4 class="card-text">ID: Sample ID<br>Car Model: Sample Model<br>VIN: Sample VIN<br>Mileage: Sample Mileage<br>Previous Owners: SampleNum<br>Service Visits: 123123<br>Reported Accidents: 123</h4>
+                    </div>
+                    <button type="button" class="btn btn-danger car-btn">Remove</button>
+                </div>
             </div>
-            </div>
-            <div class="col-sm card car-display">
-                <img src="img/sample-car.jpg" class="car-image">
-            <div class="card-body">
-                <h2 class="card-title">Sample Car Name</h2>
-                <!--
-                    uint id;
-                    string carModel;
-                    uint vin;
-                    uint mileage;
-                    uint numOfOwners;
-                    uint numOfServiceVisits;
-                    uint numOfReportedAccidents;
-                -->
-                <h4 class="card-text">ID: Sample ID<br>Car Model: Sample Model<br>VIN: Sample VIN<br>Mileage: Sample Mileage<br>Previous Owners: SampleNum<br>Service Visits: 123123<br>Reported Accidents: 123</h4>
-            </div>
-            </div>
-            <div class="col-sm card car-display">
-                <img src="img/sample-car.jpg" class="car-image">
-            <div class="card-body">
-                <h2 class="card-title">Sample Car Name</h2>
-                <!--
-                    uint id;
-                    string carModel;
-                    uint vin;
-                    uint mileage;
-                    uint numOfOwners;
-                    uint numOfServiceVisits;
-                    uint numOfReportedAccidents;
-                -->
-                <h4 class="card-text">ID: Sample ID<br>Car Model: Sample Model<br>VIN: Sample VIN<br>Mileage: Sample Mileage<br>Previous Owners: SampleNum<br>Service Visits: 123123<br>Reported Accidents: 123</h4>
-            </div>
-            </div>
-            <div class="col-sm card car-display" style="margin-right:30px;">
-                <img src="img/sample-car.jpg" class="car-image">
-            <div class="card-body">
-                <h2 class="card-title">Sample Car Name</h2>
-                <!--
-                    uint id;
-                    string carModel;
-                    uint vin;
-                    uint mileage;
-                    uint numOfOwners;
-                    uint numOfServiceVisits;
-                    uint numOfReportedAccidents;
-                -->
-                <h4 class="card-text">ID: Sample ID<br>Car Model: Sample Model<br>VIN: 123123123<br>Mileage: Sample Mileage<br>Previous Owners: SampleNum<br>Service Visits: 123123<br>Reported Accidents: 123</h4>
-            </div>
-            </div>
-        </div>
         </div>
     </body>
 </html>
