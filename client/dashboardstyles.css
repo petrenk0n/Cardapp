@@ -24,6 +24,7 @@ body{
     align-items: center;
     top:20vh;
     margin-left: 45px;
+    background-color: black;
 }
 
 .card-title{
