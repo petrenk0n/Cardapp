@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="dashboardstyles.css">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+        <script src="https://kit.fontawesome.com/cfe8f916b2.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <nav class="navbar sticky-top navbar-expand-lg navbar-light">
@@ -38,7 +39,7 @@
                 <div class="col-sm card car-display">
                     <img src="img/sample-car.jpg" class="car-image">
                     <div class="card-body">
-                        <h2 class="card-title">Sample Car Name</h2>
+                        <h2 class="card-title"><span class="car-model"></span></h2>
                             <!--
                                 uint id;
                                 string carModel;
@@ -48,7 +49,19 @@
                                 uint numOfServiceVisits;
                                 uint numOfReportedAccidents;
                             -->
-                        <h4 class="card-text">ID: Sample ID<br>Car Model: Sample Model<br>VIN: Sample VIN<br>Mileage: Sample Mileage<br>Previous Owners: SampleNum<br>Service Visits: 123123<br>Reported Accidents: 123</h4>
+                        <h4 class="card-text">
+                            <i class="fas fa-car"></i> Car ID: <span class="car-id"></span>
+                            <br>
+                            <i class="fas fa-hashtag"></i> VIN: <span class="car-vin"></span>
+                            <br>
+                            <i class="fas fa-road"></i> Mileage: <span class="car-miles"></span> miles
+                            <br>
+                            <i class="fas fa-users"></i> Number of owners: <span class="car-owners"></span>
+                            <br>
+                            <i class="fas fa-wrench"></i> Number of service visits: <span class="car-services"></span>
+                            <br>
+                            <i class="fas fa-car-crash"></i> Number of accidents: <span class="car-accidents"></span>
+                        </h4>
                     </div>
                     <button type="button" class="btn btn-danger car-btn">Remove</button>
                 </div>
