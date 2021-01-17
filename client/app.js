@@ -1,7 +1,8 @@
 App = {
+  
     loading: false,
     contracts: {},
-  
+    
     load: async () => {
       await App.loadWeb3()
       await App.loadAccount()
@@ -91,6 +92,9 @@ App = {
         // numOfReportedAccidents;
 
         // Retrieve all cars
+        
+        //const imageAPIKey = import("./config.json");
+        
         for(var i = 1; i<= carCount; i++) {
             const car = await App.carDetails.cars(i)
             const carID = car[0].toNumber()
@@ -100,15 +104,17 @@ App = {
             const carOwners = car[4].toNumber()
             const carServices = car[5].toNumber()
             const carAccidents = car[6].toNumber()
-
-            // $carCard.find('.car-model').html(carModel)  
-            // $carCard.find('.car-id').html(carID)  
-            // $carCard.find('.car-vin').html(carVin)  
-            // $carCard.find('.car-miles').html(carMiles)  
-            // $carCard.find('.car-owners').html(carOwners)  
-            // $carCard.find('.car-services').html(carServices)  
-            // $carCard.find('.car-accidents').html(carAccidents)
-
+            const carInfo = carModel.split(" ", 2)
+            // var requestOptions = {
+            //   method: 'GET',
+            //   redirect: 'follow'
+            // };
+            
+            // fetch(`http://api.carsxe.com/images?key=lbbpho6ki_jtd89ugio_pk9e80a1e&make=${carInfo[0]}&model=${carInfo[1]}&format=json`, requestOptions)
+            //   .then(response => response.json())
+            //   .catch(error => console.log('error', error));
+            //const imageInfo = fetchImage(carInfo[0],carInfo[1])
+           // console.log(imageInfo)
             const $newCarCard = $carCard.clone()
             $newCarCard.find('.car-model').html(carModel)
             $newCarCard.find('.car-id').html(carID)  
@@ -117,6 +123,7 @@ App = {
             $newCarCard.find('.car-owners').html(carOwners)  
             $newCarCard.find('.car-services').html(carServices)
             $newCarCard.find('.car-accidents').html(carAccidents)
+            //$newCarCard
             $('.row-cols-4').append($newCarCard)
             $newCarCard.show()
         }
@@ -157,5 +164,3 @@ App = {
       App.load()
     })
   })
-
-exports = { carCount } 
