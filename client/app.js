@@ -105,16 +105,7 @@ App = {
             const carServices = car[5].toNumber()
             const carAccidents = car[6].toNumber()
             const carInfo = carModel.split(" ", 2)
-            // var requestOptions = {
-            //   method: 'GET',
-            //   redirect: 'follow'
-            // };
             
-            // fetch(`http://api.carsxe.com/images?key=lbbpho6ki_jtd89ugio_pk9e80a1e&make=${carInfo[0]}&model=${carInfo[1]}&format=json`, requestOptions)
-            //   .then(response => response.json())
-            //   .catch(error => console.log('error', error));
-            //const imageInfo = fetchImage(carInfo[0],carInfo[1])
-           // console.log(imageInfo)
             const $newCarCard = $carCard.clone()
             $newCarCard.find('.car-model').html(carModel)
             $newCarCard.find('.car-id').html(carID)  
@@ -123,6 +114,22 @@ App = {
             $newCarCard.find('.car-owners').html(carOwners)  
             $newCarCard.find('.car-services').html(carServices)
             $newCarCard.find('.car-accidents').html(carAccidents)
+
+            var request = new XMLHttpRequest()
+            request.open('GET', `http://api.carsxe.com/images?key=lbbpho6ki_jtd89ugio_pk9e80a1e&make=${carInfo[0]}&model=${carInfo[1]}&format=json`,true, Headers={
+              'Access-Control-Allow-Origin': "http://localhost:3000"
+            })
+            request.onload = function (){
+              var data = JSON.parse(this.response)
+              if(request.status >= 200 && request.status< 400){
+                const imageLink = data['images'][0]['link'];
+                $newCarCard.find('.car-image').attr('src', imageLink)
+              }
+              else{
+                throw new Error(request.error)
+              }
+            }
+            request.send()
             //$newCarCard
             $('.row-cols-4').append($newCarCard)
             $newCarCard.show()
