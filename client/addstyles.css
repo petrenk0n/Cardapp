@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+body{
+    background-color:lightgray;
+}
+.navbar-brand{
+    font-family: 'Open Sans', serif;
+    font-size:20px;
+    color: darkslategray;
+}
+
+.navbar{
+    font-family: 'Open Sans', serif;
+    font-size: 20px;
+    color:darkslategray;
+}
+
+.register{
+    position:absolute;
+    top: 25vh;
+    text-align: center;
+    color: black;
+    left: 75vh;
+}
+
+.register .card{
+    width: 30rem;
+    padding: 10px;
+    background:transparent;
+    border-radius: 16px;
+    background-color: white;
+    align-items: center;
+}
+
+.register-field{
+    margin-bottom: 25px;
+    border-color: black;
+    border-radius: 90px;
+}
+
+.register .card-title{
+    margin-bottom: 10px;
+}
+
+.add-btn{
+    width:30%;
+    font-weight: 300;
+    border-radius: 90px;
+    margin-bottom:15px;
+    padding:10px;
+}

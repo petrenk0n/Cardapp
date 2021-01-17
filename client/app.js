@@ -134,3 +134,5 @@ App = {
       App.load()
     })
   })
+
+exports = { carCount } 

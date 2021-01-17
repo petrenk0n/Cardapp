@@ -54,6 +54,8 @@ body{
 
 .car-btn{
     margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 90px;
 }
 
 .account-dev-info {
