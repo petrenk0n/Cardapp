@@ -30,17 +30,19 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid register">
-            <div class="card register-card">
-                <h2 class="card-title">Add a Car</h2>
-                <input class="form-control form-control-lg register-field" type="text" placeholder="Model Name">
-                <input class="form-control form-control-lg register-field" type="text" placeholder="VIN">
-                <input class="form-control form-control-lg register-field" type="text" placeholder="Mileage">
-                <input class="form-control form-control-lg register-field" type="text" placeholder="Number of Previous Owners">
-                <input class="form-control form-control-lg register-field" type="text" placeholder="Number of Service Visits">
-                <input class="form-control form-control-lg register-field" type="text" placeholder="Number of Accidents">
-                <button class="btn btn-success add-btn"><i class="fas fa-plus"></i> Add Car</button>
+        <form>
+            <div class="container-fluid register">
+                <div class="card register-card">
+                    <h2 class="card-title">Add a Car</h2>
+                    <input class="form-control form-control-lg register-field model" type="text" placeholder="Model Name">
+                    <input class="form-control form-control-lg register-field vin" type="text" placeholder="VIN">
+                    <input class="form-control form-control-lg register-field miles" type="text" placeholder="Mileage">
+                    <input class="form-control form-control-lg register-field owners" type="text" placeholder="Number of Previous Owners">
+                    <input class="form-control form-control-lg register-field services" type="text" placeholder="Number of Service Visits">
+                    <input class="form-control form-control-lg register-field accidents" type="text" placeholder="Number of Accidents">
+                    <button onclick="App.addCar()" class="btn btn-success add-btn"><i class="fas fa-plus"></i> Add Car</button>
+                </div>
             </div>
-        </div>
+        </form>
     </body>
 </html>

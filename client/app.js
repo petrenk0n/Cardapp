@@ -114,6 +114,22 @@ App = {
             // console.log(carModel)
         }
     },
+
+    addCar: async () => {
+        App.setLoading(true)
+        const model = $('.model').val()
+        const vin = $('.vin').val()
+        const miles = $('.miles').val()
+        const owners = $('.owners').val()
+        const services = $('.services').val()
+        const accidents = $('.accidents').val()
+
+        // Parameters for createCar function
+        // _model, _vin, _mileage, _numOfOwners, _numOfServiceVisits, _numOfReportedAccidents
+
+        // Create car method
+        await App.carDetails.createCar(model, vin, miles, owners, services, accidents)
+    },
   
     setLoading: (boolean) => {
       App.loading = boolean
