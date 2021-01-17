@@ -101,6 +101,18 @@ App = {
             const carServices = car[5].toNumber()
             const carAccidents = car[6].toNumber()
 
+            const { imageAPIKey } = require("./config.json");
+            const carInfo = carModel.split(" ", 2)
+            const request = require('request');
+            var options = {
+              'method': 'GET',
+              'url': `http://api.carsxe.com/images?key=${imageAPIKey}&make=${carInfo[0]}&model=${carInfo[1]}&format=json`
+            }
+            request(options, function(error,response){
+              if(error) throw new Error(error)
+              const vehicleImage = response["images"]["link"]
+              return vehicleImage
+            })
             // $carCard.find('.car-model').html(carModel)  
             // $carCard.find('.car-id').html(carID)  
             // $carCard.find('.car-vin').html(carVin)  
@@ -117,12 +129,11 @@ App = {
             $newCarCard.find('.car-owners').html(carOwners)  
             $newCarCard.find('.car-services').html(carServices)
             $newCarCard.find('.car-accidents').html(carAccidents)
-
+            $newCarCard.attr("src", vehicleImage)
             $('.row-cols-4').append($newCarCard)
             $newCarCard.show()
         }
     },
-
     addCar: async () => {
         App.setLoading(true)
         const model = $('.model').val()
@@ -131,7 +142,6 @@ App = {
         const owners = $('.owners').val()
         const services = $('.services').val()
         const accidents = $('.accidents').val()
-
         // Parameters for createCar function
         // _model, _vin, _mileage, _numOfOwners, _numOfServiceVisits, _numOfReportedAccidents
 
