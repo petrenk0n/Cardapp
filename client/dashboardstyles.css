@@ -44,7 +44,6 @@ body{
 .card{
     box-shadow: 0;
     transition: box-shadow 1s;
-
 }
 .card:hover{
     box-shadow: 5px 5px 5px -1px darkgray;
