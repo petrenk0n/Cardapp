@@ -79,7 +79,7 @@ App = {
     // Render car info
     renderCars: async () => {
         const carCount = await App.carDetails.carCount()
-        const $carCard = $('.card-body')
+        const $carCard = $('.car-display')
         
         // Car representation
         // id;
@@ -101,17 +101,25 @@ App = {
             const carServices = car[5].toNumber()
             const carAccidents = car[6].toNumber()
 
-            $carCard.find('.car-model').html(carModel)  
-            $carCard.find('.car-id').html(carID)  
-            $carCard.find('.car-vin').html(carVin)  
-            $carCard.find('.car-miles').html(carMiles)  
-            $carCard.find('.car-owners').html(carOwners)  
-            $carCard.find('.car-services').html(carServices)  
-            $carCard.find('.car-accidents').html(carAccidents)
+            // $carCard.find('.car-model').html(carModel)  
+            // $carCard.find('.car-id').html(carID)  
+            // $carCard.find('.car-vin').html(carVin)  
+            // $carCard.find('.car-miles').html(carMiles)  
+            // $carCard.find('.car-owners').html(carOwners)  
+            // $carCard.find('.car-services').html(carServices)  
+            // $carCard.find('.car-accidents').html(carAccidents)
 
-            // const $newCarCard = $carCard.clone()
-            // $newCarCard.find('.car-model').html(carModel)
-            // console.log(carModel)
+            const $newCarCard = $carCard.clone()
+            $newCarCard.find('.car-model').html(carModel)
+            $newCarCard.find('.car-id').html(carID)  
+            $newCarCard.find('.car-vin').html(carVin)  
+            $newCarCard.find('.car-miles').html(carMiles)  
+            $newCarCard.find('.car-owners').html(carOwners)  
+            $newCarCard.find('.car-services').html(carServices)
+            $newCarCard.find('.car-accidents').html(carAccidents)
+
+            $('.row-cols-4').append($newCarCard)
+            $newCarCard.show()
         }
     },
 
