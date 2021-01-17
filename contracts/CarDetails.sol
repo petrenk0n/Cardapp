@@ -18,13 +18,13 @@ contract CarDetails {
     mapping(uint => Car) public cars;
 
     event CarAdded(
-        uint id;
-        string carModel;
-        uint vin;
-        uint mileage;
-        uint numOfOwners;
-        uint numOfServiceVisits;
-        uint numOfReportedAccidents;
+        uint id,
+        string carModel,
+        uint vin,
+        uint mileage,
+        uint numOfOwners,
+        uint numOfServiceVisits,
+        uint numOfReportedAccidents
     );
 
     // Gets called when a smart contract is run for the first time
@@ -39,6 +39,6 @@ contract CarDetails {
         cars[carCount] = Car(carCount, _model, _vin, _mileage, _numOfOwners, _numOfServiceVisits, _numOfReportedAccidents);
 
         // Trigger event
-        emit CarAdded(carCount, _model, _vin, _mileage, _numOfOwners, _numOfServiceVisits, _numOfReportedAccidents)
+        emit CarAdded(carCount, _model, _vin, _mileage, _numOfOwners, _numOfServiceVisits, _numOfReportedAccidents);
     }
 }
