@@ -68,11 +68,12 @@ App = {
   
       // Render Account
       $('#account').html(App.account)
+
+      // Render car data on dashboard
+      await App.renderCars()
   
       // Update loading state
       App.setLoading(false)
-
-      App.renderCars()
     },
 
     // Render car info
