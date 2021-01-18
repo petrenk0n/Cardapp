@@ -117,7 +117,8 @@ App = {
 
             var request = new XMLHttpRequest()
             request.open('GET', `http://api.carsxe.com/images?key=lbbpho6ki_jtd89ugio_pk9e80a1e&make=${carInfo[0]}&model=${carInfo[1]}&format=json`,true, Headers={
-              'Access-Control-Allow-Origin': "http://localhost:3000"
+              'Access-Control-Allow-Origin': "*",
+              'Origin': 'http://localhost:3000'
             })
             request.onload = function (){
               var data = JSON.parse(this.response)
@@ -126,7 +127,7 @@ App = {
                 $newCarCard.find('.car-image').attr('src', imageLink)
               }
               else{
-                throw new Error(request.error)
+                console.log('error -- ' + request.statusText)
               }
             }
             request.send()
