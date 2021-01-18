@@ -94,6 +94,7 @@ App = {
         // Retrieve all cars
         
         //const imageAPIKey = import("./config.json");
+        var imageArray = [];
         
         for(var i = 1; i<= carCount; i++) {
             const car = await App.carDetails.cars(i)
@@ -114,25 +115,26 @@ App = {
             $newCarCard.find('.car-owners').html(carOwners)  
             $newCarCard.find('.car-services').html(carServices)
             $newCarCard.find('.car-accidents').html(carAccidents)
-            // Chrome Extension temp fix for CORS issue
-            // https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc/related?hl=en-US 
-            var request = new XMLHttpRequest()
-            request.open('GET', `http://api.carsxe.com/images?key=<API Key>&make=${carInfo[0]}&model=${carInfo[1]}&format=json`,true, Headers={
-              'Access-Control-Allow-Origin': "*",
-              'Origin': 'http://localhost:3000'
-            })
-            request.onload = function (){
-              var data = JSON.parse(this.response)
-              if(request.status >= 200 && request.status< 400){
-                const imageLink = data['images'][0]['link'];
-                $newCarCard.find('.car-image').attr('src', imageLink)
-              }
-              else{
-                console.log('error -- ' + request.statusText)
-              }
+
+            // Don't call the API if the number of image links in imageArray == carCount
+            if (imageArray.length == carCount) {
+                console.log("ImageArray matches carCount")
+            } else {
+                var request = new XMLHttpRequest()
+                request.open('GET', `http://api.carsxe.com/images?key=lbbpho6ki_jtd89ugio_pk9e80a1e&make=${carInfo[0]}&model=${carInfo[1]}&format=json`,true, Headers={'Access-Control-Allow-Origin': "http://localhost:3000"})
+                request.onload = function (){
+                    var data = JSON.parse(this.response)
+                    if(request.status >= 200 && request.status< 400){
+                        const imageLink = data['images'][0]['link'];
+                        // $newCarCard.find('.car-image').attr('src', imageLink)
+                        imageArray.append(imageLink);
+                    } else {
+                        throw new Error(request.error)
+                    }
+                }
+                request.send()
             }
-            request.send()
-            //$newCarCard
+            $newCarCard.find('.car-image').attr('src', imageArray[i])
             $('.row-cols-4').append($newCarCard)
             $newCarCard.show()
         }
