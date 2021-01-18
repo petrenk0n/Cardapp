@@ -114,9 +114,10 @@ App = {
             $newCarCard.find('.car-owners').html(carOwners)  
             $newCarCard.find('.car-services').html(carServices)
             $newCarCard.find('.car-accidents').html(carAccidents)
-
+            // Chrome Extension temp fix for CORS issue
+            // https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc/related?hl=en-US 
             var request = new XMLHttpRequest()
-            request.open('GET', `http://api.carsxe.com/images?key=lbbpho6ki_jtd89ugio_pk9e80a1e&make=${carInfo[0]}&model=${carInfo[1]}&format=json`,true, Headers={
+            request.open('GET', `http://api.carsxe.com/images?key=<API Key>&make=${carInfo[0]}&model=${carInfo[1]}&format=json`,true, Headers={
               'Access-Control-Allow-Origin': "*",
               'Origin': 'http://localhost:3000'
             })
