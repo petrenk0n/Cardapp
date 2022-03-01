@@ -1,12 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import {
-  NavDropdown,
-  Container,
-  Nav,
-  Navbar,
-  NavbarBrand,
-} from "react-bootstrap";
+import { Container, Nav, Navbar, Form, Button } from "react-bootstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export default function Home() {
@@ -27,19 +21,38 @@ export default function Home() {
             ></img>
             carDapp
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-auto" styles="margin: 5px"/>
-            <Nav className="navItem">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Add Car</Nav.Link>
-            </Nav>
-          
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className="ml-auto"
+            styles="margin: 5px"
+          />
+          <Nav className="navItem">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Add Car</Nav.Link>
+          </Nav>
         </Container>
       </Navbar>
       <body id={styles.body}>
         <h1 className={styles.context}>
           <h1>Cardapp</h1>
         </h1>
+        <Form>
+          <Form.Group className={styles.searchBar}>
+          <Form.Control
+            type="search"
+            placeholder="Enter VIN"
+            aria-label="Search"
+            className={styles.searchField}
+          />
+          <Button className={styles.searchButton} variant="primary" type="submit">
+            Search
+          </Button>
+          </Form.Group>
+          
+        </Form>
       </body>
     </>
   );
 }
+
+function Search() {}

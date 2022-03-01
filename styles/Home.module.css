@@ -23,11 +23,18 @@
   margin-right: 20px;
   font-family: 'Open Sans', serif;
   font-size:40px;
-  margin-right: 5px;
 }
 .navbar{
   font-family: 'Open Sans', serif;
   font-size: 20px;
 }
+.searchBar{
+    padding-top: 150px;
+    display:inline-flex;
+    margin-left: 70vh;
+}
 
+.searchField{
+  width: 350px;
+}
 
