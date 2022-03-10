@@ -11,7 +11,7 @@ export default function addCar() {
       </Head>
       <body id={styles.body}>
         <Navbar></Navbar>
-        <Card>
+        <Card class={styles.card}>
           <Card.Body>
             <Card.Title>Add a New Car</Card.Title>
             <Form>
@@ -54,11 +54,8 @@ export default function addCar() {
                   placeholder="Number of Accidents"
                 ></Form.Control>
               </Form.Group>
-              <Button
-                variant="primary"
-                type="submit"
-              >
-                Search
+              <Button variant="primary" type="submit">
+                Add Car
               </Button>
             </Form>
           </Card.Body>
